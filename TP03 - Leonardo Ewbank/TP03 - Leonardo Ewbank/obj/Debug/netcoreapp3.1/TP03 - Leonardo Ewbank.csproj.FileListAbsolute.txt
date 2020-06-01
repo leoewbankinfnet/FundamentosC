@@ -1,0 +1,13 @@
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.exe
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.deps.json
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.runtimeconfig.json
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.runtimeconfig.dev.json
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.dll
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.pdb
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.csprojAssemblyReference.cache
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.csproj.CoreCompileInputs.cache
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.AssemblyInfoInputs.cache
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.AssemblyInfo.cs
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.dll
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.pdb
+C:\Users\leona\Downloads\Aula_Fundamentos C#\TP03 - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\TP03 - Leonardo Ewbank.genruntimeconfig.cache
