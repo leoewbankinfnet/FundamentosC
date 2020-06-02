@@ -13,7 +13,6 @@ namespace TP03___Leonardo_Ewbank
         }
 
 
-        static List<Pessoas> pessoasCadastradas = new List<Pessoas>(); 
         public static void MenuPrincipal()
         {
             Escrever("Lista de Aniversariantes");
@@ -55,10 +54,13 @@ namespace TP03___Leonardo_Ewbank
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Escrever("Ficha de Cadastro, Preencha os dados solicitados(nome e sobrenome e data de aniversário)");
             Console.ForegroundColor = ConsoleColor.Red;
-            Escrever("Digite o nome e sobrenome da Pessoa");
+            Escrever("Digite o nome da Pessoa");
             string nome = Console.ReadLine();
 
-           
+            Escrever("Digite o sobrenome da Pessoa");
+            string sobrenome = Console.ReadLine();
+
+            nome = nome + " " + sobrenome;
 
             Escrever("Entre a Data de Nascimento da Pessoa");
             DateTime aniversario = DateTime.Parse(Console.ReadLine());
@@ -70,9 +72,13 @@ namespace TP03___Leonardo_Ewbank
          
             pessoa.DataAniversario = aniversario;
 
-            pessoasCadastradas.Add(pessoa);
+            BancoDeDados.Salvar(pessoa);
+
+         
 
             Escrever("Cadastrado Com Sucesso");
+            System.Threading.Thread.Sleep(4000);
+            Limpar();
 
             MenuPrincipal();
     
@@ -110,9 +116,9 @@ namespace TP03___Leonardo_Ewbank
         static void ListarTodos()
         {
             Limpar();
-            foreach (var pessoa in pessoasCadastradas )
+            foreach (var pessoa in BancoDeDados.PessoasNoSistema() )
             {
-                Escrever($"{pessoasCadastradas.IndexOf(pessoa)}) {pessoa.Nome}");
+                Escrever($"{BancoDeDados.PessoasNoSistema().IndexOf(pessoa)}) {pessoa.Nome}");
             }
             Escrever("Escolha um numero para ver mais detalhes ou 0 para retornar ao menu principal");
 
@@ -124,13 +130,17 @@ namespace TP03___Leonardo_Ewbank
             }
             else
             {
-                foreach(var pessoa in pessoasCadastradas)
+                foreach(var pessoa in BancoDeDados.PessoasNoSistema())
                 {
-                    if(pessoasCadastradas.IndexOf(pessoa) == operacao)
+                    if(BancoDeDados.PessoasNoSistema().IndexOf(pessoa) == operacao)
                     {
                         Escrever($"Nome: {pessoa.Nome}, Data de Nascimento {pessoa.DataAniversario}");
                         TempoParaAniversario(pessoa.DataAniversario,pessoa.Nome);
-                        
+                        Escrever("Pressione uma tecla para retornar ao menu principal");
+                        Console.ReadKey();
+                        Limpar();
+                        MenuPrincipal();
+
                     }
                 }
             }
@@ -142,7 +152,7 @@ namespace TP03___Leonardo_Ewbank
             Escrever("Digite o nome ou sobrenome da Pessoa");
             string nome = Console.ReadLine();
 
-            var pessoasBuscadas = pessoasCadastradas.Where(pessoa => pessoa.Nome.Contains(nome));
+            var pessoasBuscadas = BancoDeDados.PessoasNoSistema().Where(pessoa => pessoa.Nome.Contains(nome,StringComparison.InvariantCultureIgnoreCase));
             var pessoasEncontradas = new List<Pessoas>();
 
             foreach(var pessoa in pessoasBuscadas)
@@ -154,33 +164,32 @@ namespace TP03___Leonardo_Ewbank
             {
                 Console.WriteLine($"{pessoasEncontradas.IndexOf(pessoa)}){pessoa.Nome}");
             }
-            Escrever("Escolha um numero para ver mais detalhes ou 0 para retornar ao menu principal");
+
+            Escrever("Escolha um numero para ver mais detalhes");
+            Escrever(" ");
 
             int operacao = int.Parse(Console.ReadLine());
 
-            if (operacao == '0')
-            {
-                MenuPrincipal();
-            }
-            else
-            {
+           
                 foreach (var pessoa in pessoasEncontradas)
                 {
                     if (pessoasEncontradas.IndexOf(pessoa) == operacao)
                     {
                         Escrever($"Nome: {pessoa.Nome}, Data de Nascimento {pessoa.DataAniversario}");
                         TempoParaAniversario(pessoa.DataAniversario, pessoa.Nome);
-
+                        Escrever("Pressione uma tecla para retornar ao menu principal");
+                        Console.ReadKey();
+                        Limpar();
                     }
                 }
-            }
+            
             MenuPrincipal();
         }
         
 
         static void TempoParaAniversario(DateTime pessoa, string nome)
         {
-            DateTime hoje = DateTime.Today;
+            DateTime hoje = DateTime.Today.Date;
             DateTime prox = new DateTime(hoje.Year,pessoa.Month,pessoa.Day );
             if (prox < hoje)
             {
@@ -188,14 +197,6 @@ namespace TP03___Leonardo_Ewbank
             }
             int faltam = (prox - hoje).Days;
             Escrever($"Faltam {faltam} dias para o aniversário da {nome}");
-        }
-
-
-        public class Pessoas
-        {
-            public string Nome { get; set; }
-           
-            public DateTime DataAniversario { get; set; }
         }
 
     }
