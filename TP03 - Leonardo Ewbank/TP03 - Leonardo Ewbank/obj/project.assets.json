@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leona\\Downloads\\Aula_Fundamentos C#\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank.csproj",
+      "projectUniqueName": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank.csproj",
       "projectName": "TP03 - Leonardo Ewbank",
-      "projectPath": "C:\\Users\\leona\\Downloads\\Aula_Fundamentos C#\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank.csproj",
+      "projectPath": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank.csproj",
       "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leona\\Downloads\\Aula_Fundamentos C#\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\obj\\",
+      "outputPath": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
