@@ -119,7 +119,7 @@ namespace TP03___Leonardo_Ewbank
         {
             Limpar();
 
-            //1) Buscar  (Considerando que só existe 1 pessoa com o mesmo nome)
+            //1) Buscar 
             Escrever("Digite o nome completo da pessoa que deseja Buscar");
             string nomeCompleto = Console.ReadLine();
 
@@ -129,18 +129,28 @@ namespace TP03___Leonardo_Ewbank
 
             var mod = buscado;
 
-            BancoDeDadosEmArquivo.Remover(buscado);
+
 
 
             if (buscado == null)
             {
                 Escrever("Pessoa não cadastrada");
-                Escrever("Deseja Buscar outra pessoa? Digite 1 para sim e 2 para voltar ao menu principal");
-                int op = int.Parse(Console.ReadLine());
-                if (op == 1) { Limpar(); AlterarPessoa(); }
-                else { Limpar(); MenuPrincipal(); }
+                Escrever("Pressione Enter para Buscar outra pessoa ou ESC para retornar ao menu principal");
+
+                ConsoleKeyInfo key = Console.ReadKey();
+                if (key.Key == ConsoleKey.Escape)
+                {
+                    Limpar();
+                    MenuPrincipal();
+                }
+                else if (key.Key == ConsoleKey.Enter)
+                {
+                    Limpar();
+                    AlterarPessoa();
+                }
             }
 
+            BancoDeDadosEmArquivo.Remover(buscado);
             Limpar();
             Escrever($"Nome: {buscado.Nome}");
             Escrever($"Data de Nascimento: {buscado.DataAniversario.Date.ToString("dd/MM/yyyy")}");
@@ -162,7 +172,8 @@ namespace TP03___Leonardo_Ewbank
                 if (operacao == 1)
                 {
                     Escrever("Digite o nome corrigido");
-                    mod.Nome = Console.ReadLine();
+                    string Nome = Console.ReadLine();
+                    if (!String.IsNullOrEmpty(Nome)) mod.Nome = Nome; 
                     Escrever("Deseja alterar outra informação? Digite S para sim e N para não");
                     string op = Console.ReadLine();
                     if (op.Equals("S", StringComparison.InvariantCultureIgnoreCase)) alterar = true;
@@ -172,6 +183,7 @@ namespace TP03___Leonardo_Ewbank
                 {
                     Escrever("Digite a data corrigida");
                     mod.DataAniversario = DateTime.Parse(Console.ReadLine());
+                    
                     Escrever("Deseja alterar outra informação? Digite S para sim e N para não");
                     string op = Console.ReadLine();
                     if (op.Equals("S", StringComparison.InvariantCultureIgnoreCase)) alterar = true;
