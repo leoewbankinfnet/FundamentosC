@@ -1,0 +1,13 @@
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\AT - Leonardo Ewbank.exe
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\AT - Leonardo Ewbank.deps.json
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\AT - Leonardo Ewbank.runtimeconfig.json
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\AT - Leonardo Ewbank.runtimeconfig.dev.json
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\AT - Leonardo Ewbank.dll
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\bin\Debug\netcoreapp3.1\AT - Leonardo Ewbank.pdb
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\AT - Leonardo Ewbank.csproj.CoreCompileInputs.cache
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\AT - Leonardo Ewbank.AssemblyInfoInputs.cache
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\AT - Leonardo Ewbank.AssemblyInfo.cs
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\AT - Leonardo Ewbank.dll
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\AT - Leonardo Ewbank.pdb
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\AT - Leonardo Ewbank.genruntimeconfig.cache
+C:\Users\leona\Documents\GitHub\FundamentosC-\AT - Leonardo Ewbank\TP03 - Leonardo Ewbank\obj\Debug\netcoreapp3.1\AT - Leonardo Ewbank.csprojAssemblyReference.cache

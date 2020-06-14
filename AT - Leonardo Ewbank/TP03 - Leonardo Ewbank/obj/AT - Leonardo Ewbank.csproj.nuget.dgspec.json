@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank.csproj": {}
+    "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\AT - Leonardo Ewbank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank.csproj": {
+    "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\AT - Leonardo Ewbank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank.csproj",
-        "projectName": "TP03 - Leonardo Ewbank",
-        "projectPath": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\TP03 - Leonardo Ewbank.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\AT - Leonardo Ewbank.csproj",
+        "projectName": "AT - Leonardo Ewbank",
+        "projectPath": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\AT - Leonardo Ewbank.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\TP03 - Leonardo Ewbank\\obj\\",
         "projectStyle": "PackageReference",

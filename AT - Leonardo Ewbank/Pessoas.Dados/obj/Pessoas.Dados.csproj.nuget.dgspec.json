@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leona\\Downloads\\Aula_Fundamentos C#\\TP03 - Leonardo Ewbank\\Pessoas.Dados\\Pessoas.Dados.csproj": {}
+    "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\Pessoas.Dados\\Pessoas.Dados.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leona\\Downloads\\Aula_Fundamentos C#\\TP03 - Leonardo Ewbank\\Pessoas.Dados\\Pessoas.Dados.csproj": {
+    "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\Pessoas.Dados\\Pessoas.Dados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\Downloads\\Aula_Fundamentos C#\\TP03 - Leonardo Ewbank\\Pessoas.Dados\\Pessoas.Dados.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\Pessoas.Dados\\Pessoas.Dados.csproj",
         "projectName": "Pessoas.Dados",
-        "projectPath": "C:\\Users\\leona\\Downloads\\Aula_Fundamentos C#\\TP03 - Leonardo Ewbank\\Pessoas.Dados\\Pessoas.Dados.csproj",
+        "projectPath": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\Pessoas.Dados\\Pessoas.Dados.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\Downloads\\Aula_Fundamentos C#\\TP03 - Leonardo Ewbank\\Pessoas.Dados\\obj\\",
+        "outputPath": "C:\\Users\\leona\\Documents\\GitHub\\FundamentosC-\\AT - Leonardo Ewbank\\Pessoas.Dados\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

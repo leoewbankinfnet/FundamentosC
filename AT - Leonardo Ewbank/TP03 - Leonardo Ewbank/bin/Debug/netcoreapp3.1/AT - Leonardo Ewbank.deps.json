@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "AT - Leonardo Ewbank/1.0.0": {
+        "runtime": {
+          "AT - Leonardo Ewbank.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AT - Leonardo Ewbank/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

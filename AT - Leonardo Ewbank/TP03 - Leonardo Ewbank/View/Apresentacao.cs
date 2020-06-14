@@ -12,7 +12,12 @@ namespace TP03___Leonardo_Ewbank
 
         public static void MenuPrincipal()
         {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Black;
             Escrever("Lista de Aniversariantes");
+            Escrever("----------------------------------------------------------------------------------------");
+            Hoje();
+            Escrever("----------------------------------------------------------------------------------------");
             Escrever("Menu principal");
             Escrever("Selecione uma opção:");
             Escrever("1 - Cadastrar Pessoa");
@@ -20,7 +25,7 @@ namespace TP03___Leonardo_Ewbank
             Escrever("3 - Alterar Pessoa");
             Escrever("4 - Deletar Pessoa");
             Escrever("5 - Sair ");
-
+          
 
             int operacao = int.Parse(Console.ReadLine());
 
@@ -81,7 +86,6 @@ namespace TP03___Leonardo_Ewbank
 
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Escrever("Consultar Pessoa");
-            Console.ForegroundColor = ConsoleColor.Red;
             Escrever("Escolha uma opção abaixo para a consulta:");
             Escrever("1 - Listar todas as pessoas cadastradas");
             Escrever("2 - Buscar por Nome");
@@ -122,7 +126,10 @@ namespace TP03___Leonardo_Ewbank
             //Buscar a pessoa pelo nome
 
             var buscado = BancoDeDadosEmArquivo.BuscarPeloNome(nomeCompleto);
-            var mod = new Pessoas();
+
+            var mod = buscado;
+
+            BancoDeDadosEmArquivo.Remover(buscado);
 
 
             if (buscado == null)
@@ -134,9 +141,10 @@ namespace TP03___Leonardo_Ewbank
                 else { Limpar(); MenuPrincipal(); }
             }
 
-
+            Limpar();
             Escrever($"Nome: {buscado.Nome}");
             Escrever($"Data de Nascimento: {buscado.DataAniversario.Date.ToString("dd/MM/yyyy")}");
+
 
             //2)Alterar Dados
             bool alterar = true;
@@ -144,9 +152,13 @@ namespace TP03___Leonardo_Ewbank
             while (alterar == true)
             {
                 Escrever("O que você quer alterar?");
+
                 Escrever("1 - Nome");
+
                 Escrever("2 - Data de Nascimento");
+
                 int operacao = int.Parse(Console.ReadLine());
+
                 if (operacao == 1)
                 {
                     Escrever("Digite o nome corrigido");
@@ -169,9 +181,8 @@ namespace TP03___Leonardo_Ewbank
 
             }
 
-            //3)Salvar Funcionario, ainda salvando como um novo aqui. precisa remover o que estava salvo
+       
 
-            BancoDeDadosEmArquivo.Remover(buscado);
             BancoDeDadosEmArquivo.Salvar(mod);
 
             Limpar();
@@ -203,13 +214,14 @@ namespace TP03___Leonardo_Ewbank
         {
             Limpar();
 
-            ifRetornoMenu(BancoDeDadosEmArquivo.PessoasNoSistema());
+            var lista = BancoDeDadosEmArquivo.PessoasNoSistema();
 
-            foreach (var pessoa in BancoDeDadosEmArquivo.PessoasNoSistema())
+            ifRetornoMenu(lista);
+           
+            
+            foreach (var pessoa in lista)
             {
-                Escrever($"{pessoa.Nome}  Data de Nascimento: {pessoa.DataAniversario.Date}");
-                TempoParaAniversario(pessoa.DataAniversario);
-                Escrever("");
+                Escrever($"{lista.IndexOf(pessoa)}){pessoa.Nome}"); 
             }
             Detalhes(BancoDeDadosEmArquivo.PessoasNoSistema().ToList());
             Pressionar();
@@ -242,6 +254,7 @@ namespace TP03___Leonardo_Ewbank
             int mes = int.Parse(Console.ReadLine());
             Escrever("Digite o dia desejado: ");
             int dia = int.Parse(Console.ReadLine());
+
             DateTime consulta = new DateTime(DateTime.Today.Year, mes, dia);
 
 
@@ -253,8 +266,9 @@ namespace TP03___Leonardo_Ewbank
 
             foreach (var pessoa in pessoasEncontradas)
             {
-                Console.WriteLine($"{pessoasEncontradas.IndexOf(pessoa)}){pessoa.Nome}");
+                Escrever($"{pessoasEncontradas.IndexOf(pessoa)}){pessoa.Nome}");
             }
+            Detalhes(pessoasEncontradas);
             Pressionar();
         }
         static void ifRetornoMenu(List<Pessoas> Consulta)
@@ -281,39 +295,83 @@ namespace TP03___Leonardo_Ewbank
                 prox = prox.AddYears(1);
             }
             int faltam = (prox - hoje).Days;
-            Escrever($"Faltam {faltam} dias para o aniversário");
+            if (faltam == 0)
+            {
+                Escrever("Eh Hoje!");
+            }
+            else Escrever($"Faltam {faltam} dias para o aniversário");
         }
 
         static void Detalhes(List<Pessoas> pessoa)
         {
-            Escrever("Deseja ver mais detalhes dos aniversariantes?Pressione ENTER para sim e ESC para retornar ao menu principal");
+            Escrever("\nDeseja ver mais detalhes dos aniversariantes?Pressione ENTER para sim e ESC para retornar ao menu principal\n");
             ConsoleKeyInfo key = Console.ReadKey();
             if (key.Key == ConsoleKey.Escape)
             {
                 Escrever("Retornando ao menu principal");
                 Limpar();
                 MenuPrincipal();
-
             }
             else if (key.Key == ConsoleKey.Enter)
             {
                 Escrever("Digite o indice do aniversariante desejado");
                 int op = int.Parse(Console.ReadLine());
 
-                var dets = new Pessoas();
+                var dets = new List<Pessoas>();
 
                 foreach (var p in pessoa)
                 {
                     if (pessoa.ToList().IndexOf(p) == op)
                     {
-                        dets.Nome = p.Nome;
-                        dets.DataAniversario = p.DataAniversario;
+                        dets.Add(p);
+                        break;
                     }
                 }
-                Escrever($"{dets.Nome}  Data de Nascimento: {dets.DataAniversario.Date}");
-                TempoParaAniversario(dets.DataAniversario);
-                Escrever("");
+
+                if (dets.Count() == 0)
+                {
+                    Limpar();
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Escrever("Erro Na selecao");
+                    Pressionar();
+                }
+                else
+                {
+                    Limpar();
+                    foreach (var p in dets)
+                    {
+                        Escrever($"{p.Nome} Data de Aniversario {p.DataAniversario.ToString("dd/MM")}");
+                        TempoParaAniversario(p.DataAniversario);
+                    }
+                }
             }
+        }
+
+        static void Hoje()
+        {
+            DateTime DtHoje = DateTime.Today;
+
+
+            var AnivHoje = BancoDeDadosEmArquivo.AniversariantesHoje().ToList();
+
+
+            Escrever($"Hoje eh dia {DtHoje.Date.ToString("dd/MM")} ");
+
+            if (AnivHoje.Count() == 0)
+            {
+                Escrever("Ninguem faz aniversario hoje");
+            }
+            else
+            {
+                Escrever("Aniversariantes do dia:");
+
+                foreach (var aniv in AnivHoje)
+                {
+                    Escrever($"{ aniv.Nome} \n");
+                }
+            }
+            
+
         }
     }
 }

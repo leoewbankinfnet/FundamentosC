@@ -44,11 +44,15 @@ namespace TP03___Leonardo_Ewbank.Controller
         }
         public static void Remover(Pessoas pessoa)
         {
-            string nome = pessoa.Nome;
 
-            var antigos = File.ReadAllLines(ObterNomeArq());
-            var novas = antigos.Where(linha => !linha.Contains(nome));
-            File.WriteAllLines(ObterNomeArq(), novas);
+       
+                string nome = pessoa.Nome;
+
+                var antigos = File.ReadAllLines(ObterNomeArq());
+                var novas = antigos.Where(linha => !linha.Contains(nome));
+                File.WriteAllLines(ObterNomeArq(), novas);
+            
+           
         }
 
         public static List<Pessoas> PessoasNoSistema()
@@ -96,13 +100,21 @@ namespace TP03___Leonardo_Ewbank.Controller
                     select x);
 
         }
-        public static  IEnumerable<Pessoas> PessoasNoSistema(DateTime data)
+        public static IEnumerable<Pessoas> PessoasNoSistema(DateTime data)
         {
             return (from x in PessoasNoSistema()
-                    where x.DataAniversario.Date.Equals(data)
+                    where x.DataAniversario.Month == data.Month && x.DataAniversario.Day == data.Day
                     orderby x.Nome
                     select x);
         }
+        public static  IEnumerable<Pessoas> AniversariantesHoje()
+        {
+            return (from x in PessoasNoSistema()
+                    where x.DataAniversario.Day == DateTime.Today.Day && x.DataAniversario.Month == DateTime.Today.Month
+                    orderby x.Nome
+                    select x);
+        }
+
         public static Pessoas BuscarPeloNome(string nomeCompleto)
         {
             return (from x in PessoasNoSistema()
